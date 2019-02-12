@@ -1,47 +1,34 @@
-""" test_repo
+""" Example schema for testing migration
 
-:Author: Name <email>
+:Author: Arthur Goldberg <Arthur.Goldberg@mssm.edu>
 :Date: 2019-2-12
 :Copyright: 2019, Karr Lab
 :License: MIT
 """
 
 
-class ExampleClass(object):
-    """ Descipton of ExampleClass
+from obj_model import (BooleanAttribute, EnumAttribute, FloatAttribute, IntegerAttribute,
+                       PositiveIntegerAttribute, RegexAttribute, SlugAttribute, StringAttribute, LongStringAttribute,
+                       UrlAttribute, OneToOneAttribute, ManyToOneAttribute, ManyToManyAttribute, OneToManyAttribute,
+                       TabularOrientation)
+import obj_model
 
-    Attributes:
-        attr_1 (:obj:`type of attr_1`): description of attr_1
-        attr_2 (:obj:`type of attr_2`): description of attr_2
-        ...
-    """
 
-    def __init__(self, arg_1, arg_2, kwarg_1=None, kwarg_2=None):
-        """
-        Args:
-            arg_1 (:obj:`type of arg_1`): description of arg_1
-            arg_2 (:obj:`type of arg_2`): description of arg_2
-            kwarg_1 (:obj:`type of kwarg_1`, optional): description of kwarg_1
-            kwarg_2 (:obj:`type of kwarg_2`, optional): description of kwarg_2
-            ...
-        """
-        self.attr_1 = arg_1
-        self.attr_2 = arg_2
+class Test(obj_model.Model):
+    id = SlugAttribute()
+    name = StringAttribute(default='test')
+    revision = StringAttribute(default='0.0')
+    existing_attr = StringAttribute(default='existing_attr_val')
+    references = ManyToManyAttribute('Reference', related_name='tests')
 
-    def method_1(self, arg_1, arg_2, kwarg_1=None, kwarg_2=None):
-        """ Description of method_1
+    class Meta(obj_model.Model.Meta):
+        attribute_order = ('id', 'name', 'revision', 'existing_attr')
+        tabular_orientation = TabularOrientation.column
 
-        Args:
-            arg_1 (:obj:`type of arg_1`): description of arg_1
-            arg_2 (:obj:`type of arg_2`): description of arg_2
-            kwarg_1 (:obj:`type of kwarg_1`, optional): description of kwarg_1
-            kwarg_2 (:obj:`type of kwarg_2`, optional): description of kwarg_2
-            ...
 
-        Returns:
-            :obj:`type of return value`: description of return value
+class Reference(obj_model.Model):
+    id = SlugAttribute()
+    value = StringAttribute()
 
-        Raises:
-            :obj:`type of raised exception(s)`: description of raised exceptions
-        """
-        pass
+    class Meta(obj_model.Model.Meta):
+        attribute_order = ('id', 'value')
