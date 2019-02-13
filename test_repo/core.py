@@ -27,6 +27,7 @@ class Test(obj_model.Model):
 
 
 class Reference(obj_model.Model):
+    # comment on practice_branch
     id = SlugAttribute()
     value = StringAttribute()
 
