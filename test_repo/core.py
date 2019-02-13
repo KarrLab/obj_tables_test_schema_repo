@@ -19,6 +19,7 @@ class Test(obj_model.Model):
     name = StringAttribute(default='test')
     revision = StringAttribute(default='0.0')
     existing_attr = StringAttribute(default='existing_attr_val')
+    # comment on practice_branch
     references = ManyToManyAttribute('Reference', related_name='tests')
 
     class Meta(obj_model.Model.Meta):
