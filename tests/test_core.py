@@ -8,7 +8,7 @@
 
 import unittest
 
-from test_repo.core import Test, Reference
+from test_repo.core import TestNew, Reference
 
 
 class TestCore(unittest.TestCase):
@@ -19,11 +19,11 @@ class TestCore(unittest.TestCase):
             id='Reference_1',
             value=hi_dad
         )
-        test = Test(
+        test = TestNew(
             id='Test_1',
             existing_attr='hi mom',
             references=[reference]
         )
         self.assertEqual(reference.value, hi_dad)
         self.assertEqual(test.references[0], reference)
-        self.assertEqual(test.name, Test.Meta.local_attributes['name'].attr.default)
+        self.assertEqual(test.name, TestNew.Meta.local_attributes['name'].attr.default)

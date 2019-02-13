@@ -14,7 +14,7 @@ from obj_model import (BooleanAttribute, EnumAttribute, FloatAttribute, IntegerA
 import obj_model
 
 
-class Test(obj_model.Model):
+class TestNew(obj_model.Model):
     id = SlugAttribute()
     name = StringAttribute(default='test')
     revision = StringAttribute(default='0.0')
