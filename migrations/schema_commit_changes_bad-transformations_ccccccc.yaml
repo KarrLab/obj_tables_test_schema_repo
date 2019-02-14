@@ -1,0 +1,7 @@
+# schema commit changes file
+# stored in 'schema_commit_changes_2019-02-13-14-05-42_ba1f9d3.yaml'
+
+hash: ba1f9d33a3e18a74f79f41903e7e88e118134d5f
+renamed_attributes: []
+renamed_models: [[Test, TestNew]]
+transformations_file: 'no_transformations_attribute.py'
