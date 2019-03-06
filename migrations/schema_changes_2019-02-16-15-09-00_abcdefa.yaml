@@ -1,7 +1,7 @@
 # schema commit changes file
 # stored in 'schema_commit_changes_2019-02-16-15-09-00_abcdefa.yaml'
 
-hash: abcdefabcdefabcdefabcdefabcdefabcdefabcd
+commit_hash: abcdefabcdefabcdefabcdefabcdefabcdefabcd
 renamed_attributes: []
 renamed_models: [[Test, TestNew]]
 transformations_file: ''
