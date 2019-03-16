@@ -8,7 +8,7 @@
 
 import unittest
 import os
-from test_repo.core import TestNew, Reference
+from test_repo.core_w_metadata_attr import TestNew, Reference
 from obj_model.utils import set_git_repo_metadata_from_path
 import obj_model
 
