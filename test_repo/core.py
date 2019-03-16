@@ -7,10 +7,7 @@
 """
 
 
-from obj_model import (BooleanAttribute, EnumAttribute, FloatAttribute, IntegerAttribute,
-                       PositiveIntegerAttribute, RegexAttribute, SlugAttribute, StringAttribute, LongStringAttribute,
-                       UrlAttribute, OneToOneAttribute, ManyToOneAttribute, ManyToManyAttribute, OneToManyAttribute,
-                       TabularOrientation)
+from obj_model import SlugAttribute, StringAttribute, ManyToManyAttribute, TabularOrientation
 import obj_model
 
 
