@@ -13,7 +13,7 @@ from obj_model.utils import set_git_repo_metadata_from_path
 import obj_model
 
 
-# @unittest.skip("not a test; use when fixture(s) need updating")
+@unittest.skip("not a test; use when fixture(s) need updating")
 class TestMakeFixtureFiles(unittest.TestCase):
 
     def test_make_fixtures(self):
