@@ -38,3 +38,6 @@ class TestMakeFixtureFiles(unittest.TestCase):
         obj_model.io.Writer().run(fixture_file, [test_new_1, test_new_2], models=[TestNew, Reference])
 
 # change in 3rd repo
+# another change in 3rd clone
+
+
