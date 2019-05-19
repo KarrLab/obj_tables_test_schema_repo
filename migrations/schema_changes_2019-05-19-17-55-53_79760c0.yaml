@@ -1,0 +1,7 @@
+# schema changes file
+# stored in 'schema_changes_2019-05-19-17-55-53_79760c0.yaml'
+
+commit_hash: 79760c0d224c69f46b8d241a350b2e6b09bf50ba
+renamed_attributes: []
+renamed_models: []
+transformations_file: ''
