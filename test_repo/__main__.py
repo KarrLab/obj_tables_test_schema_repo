@@ -29,10 +29,12 @@ class TestRepo(cement.App):
     class Meta:
         label = 'test_repo'
         base_controller = 'base'
-        # todo: get arguments working
+        '''
+        # todo: get version working
         arguments = [
-            (['-v', '--version'], dict(action='version', version=test_repo.__version__)),
+            (['-v', '--version'], dict(action='version', version=test_repo.__version__))
         ]
+        '''
         handlers = [
             CementControllers.SchemaChangesTemplateController,
             CementControllers.AutomatedMigrationConfigController,
