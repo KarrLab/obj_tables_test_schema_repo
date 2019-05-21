@@ -6,8 +6,8 @@
 :License: MIT
 """
 
-from obj_model.migrate import main
+from obj_model.migrate import data_repo_main
 
 
 if __name__ == '__main__':
-    main()
+    data_repo_main()
