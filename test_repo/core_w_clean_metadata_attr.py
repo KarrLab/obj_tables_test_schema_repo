@@ -23,7 +23,6 @@ class Test(obj_model.Model):
     class Meta(obj_model.Model.Meta):
         attribute_order = ('id', 'name', 'revision', 'existing_attr')
         tabular_orientation = TabularOrientation.column
-_GIT_METADATA = (Test, ('url', 'branch', 'revision'))
 
 
 class Foo(obj_model.Model):
