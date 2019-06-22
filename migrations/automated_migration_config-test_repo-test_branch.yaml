@@ -12,3 +12,5 @@ migrator: wc_lang
 schema_file: ../test_repo/core_w_clean_metadata_attr.py
 schema_repo_url: https://github.com/KarrLab/test_repo
 branch: 'test_branch'
+
+# comment added on test_branch
