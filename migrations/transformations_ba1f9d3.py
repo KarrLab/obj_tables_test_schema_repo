@@ -1,7 +1,13 @@
-def f(migrator, existing_models):
-    pass
+from obj_model.migrate import MigrationWrapper
 
-transformations = {
-    'PREPARE_EXISTING_MODELS': f,
-    'MODIFY_MIGRATED_MODELS': f
-}
+
+class NullWrapper(MigrationWrapper):
+
+    # make a wrapper with prepare_existing_models & modify_migrated_models that do nothing
+    def prepare_existing_models(self, migrator, existing_models):
+        pass
+
+    def modify_migrated_models(self, migrator, migrated_models):
+        pass
+
+transformations = NullWrapper()
