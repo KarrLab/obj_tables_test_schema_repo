@@ -9,4 +9,4 @@ branch: migration_test_2
 files_to_migrate:
 - ../tests/fixtures/example-wc_lang-model.xlsx
 schema_file: ../wc_lang/core.py
-schema_repo_url: https://github.com/KarrLab/wc_lang
+schema_repo_url: https://github.com/KarrLab/test_wc_lang
