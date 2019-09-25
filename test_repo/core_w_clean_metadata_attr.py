@@ -7,11 +7,11 @@
 """
 
 
-from obj_model import SlugAttribute, StringAttribute, ManyToManyAttribute, TabularOrientation
-import obj_model
+from obj_tables import SlugAttribute, StringAttribute, ManyToManyAttribute, TableFormat
+import obj_tables
 
 
-class Test(obj_model.Model):
+class Test(obj_tables.Model):
     id = SlugAttribute()
     name = StringAttribute(default='test')
     url = StringAttribute()
@@ -20,10 +20,10 @@ class Test(obj_model.Model):
     existing_attr = StringAttribute(default='existing_attr_val')
     # comment on master branch
 
-    class Meta(obj_model.Model.Meta):
+    class Meta(obj_tables.Model.Meta):
         attribute_order = ('id', 'name', 'revision', 'existing_attr')
-        tabular_orientation = TabularOrientation.column
+        tabular_orientation = TableFormat.column
 
 
-class Foo(obj_model.Model):
+class Foo(obj_tables.Model):
     id = SlugAttribute()

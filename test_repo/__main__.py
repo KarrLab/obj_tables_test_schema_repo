@@ -6,7 +6,7 @@
 :License: MIT
 """
 
-from obj_model.migrate import data_repo_migration_controllers
+from obj_tables.migrate import data_repo_migration_controllers
 import cement
 
 

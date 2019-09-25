@@ -7,11 +7,11 @@
 """
 
 
-from obj_model import SlugAttribute, StringAttribute, ManyToManyAttribute, TabularOrientation
-import obj_model
+from obj_tables import SlugAttribute, StringAttribute, ManyToManyAttribute, TableFormat
+import obj_tables
 
 
-class TestNew(obj_model.Model):
+class TestNew(obj_tables.Model):
     id = SlugAttribute()
     name = StringAttribute(default='test')
     revision = StringAttribute(default='0.0')
@@ -19,17 +19,17 @@ class TestNew(obj_model.Model):
     # comment on master branch
     references = ManyToManyAttribute('Reference', related_name='tests')
 
-    class Meta(obj_model.Model.Meta):
+    class Meta(obj_tables.Model.Meta):
         attribute_order = ('id', 'name', 'revision', 'existing_attr')
-        tabular_orientation = TabularOrientation.column
+        tabular_orientation = TableFormat.column
 
 
-class Reference(obj_model.Model):
+class Reference(obj_tables.Model):
     # comment on practice_branch
     id = SlugAttribute()
     value = StringAttribute()
 
-    class Meta(obj_model.Model.Meta):
+    class Meta(obj_tables.Model.Meta):
         attribute_order = ('id', 'value')
 
 # add comment to core.py

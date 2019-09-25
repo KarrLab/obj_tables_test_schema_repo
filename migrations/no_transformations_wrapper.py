@@ -1,4 +1,4 @@
-from obj_model.migrate import MigrationWrapper
+from obj_tables.migrate import MigrationWrapper
 
 
 class NullWrapper(MigrationWrapper):
